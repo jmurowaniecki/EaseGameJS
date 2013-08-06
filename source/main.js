@@ -7,8 +7,8 @@ var renderer = PIXI.autoDetectRenderer(windowWidth, windowHeight);
 document.body.appendChild(renderer.view);
 
 //inicia o game e da um build
-//var game = new Game(windowWidth, windowHeight);
-//game.build();
+var game = new Game(windowWidth, windowHeight);
+game.build();
 
 //chama o loop da aplicação
 requestAnimFrame( update );
@@ -16,7 +16,7 @@ requestAnimFrame( update );
 //loop da aplicação
 function update() {
     requestAnimFrame( update );
-    //game.update();
+    game.update();
     renderer.render(game.stage);
 }
 
